@@ -4,10 +4,6 @@ import { setCurrentCorrectAnsIndex, setQuizIndex, setScore, setSelectedAnsList, 
 
 
 
-// console.log(data[0].question);
-
-
-
 
 const Quiz = () => {
   const dispatch = useDispatch();
@@ -16,11 +12,9 @@ const Quiz = () => {
   const selectedIndex = useSelector((state:any)=>state.selectedIndex);
   const currentCorrectAnsIndex = useSelector((state:any)=>state.currentCorrectAnsIndex);
   const quizIndex = useSelector((state:any)=>state.quizIndex);
-  const selectedAns = useSelector((state:any)=>state.selectedAnsList);
   const temporarySelect = useSelector((state:any)=>state.temporarySelect);
   let score = useSelector((state:any)=>state.score);
 
-  console.log(selectedAns);
 
   const handleClick = (ans:string,id:number,correctAns:number) => {
     dispatch(setTemporarySelect(ans))
